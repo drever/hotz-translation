@@ -15,6 +15,11 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" has some his
 | Begriff | notion |||
 | ebenes Netz | flat network| plane network ||
 | X-Kategorie | X-Kategorie | | slip of the pen, but sounds awesome|
-| Zusammenschatlen (von Automaten) | interconnection of automata | | |
+| Zusammenschalten (von Automaten) | interconnection of automata | | |
 | Baustein | building block| | |
 | innere Punkte des Netzes | inner points of the network | | |
+| Faktorkategorie | quotient category | | |
+| Erzeugendensystem | generator | | |
+| Abbildung | mapping | | |
+| Vertauschung | permutation | | |
+| Relationensystem | relational system | | |
