@@ -9,7 +9,7 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" has some his
 ## Translations of central words
 
 | German | English | Alternative English translations | Comment|
-| -------|---------|----------------------------------||
+| -------|---------|----------------------------------|--------|
 | Schaltkreis|circuit|||
 | Aufgabe| task|||
 | Begriff | notion |||
