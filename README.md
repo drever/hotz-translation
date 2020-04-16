@@ -8,7 +8,11 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" has some his
 * [Latest PDF version from master](https://github.com/drever/hotz-translation/blob/master/hotz.pdf)
 ## Translations of central words
 
-| German | English | Alternative English translations |
-| -------|---------|----------------------------------|
-| Schaltkreis|circuit||
-| Aufgabe| task||
+| German | English | Alternative English translations | Comment|
+| -------|---------|----------------------------------||
+| Schaltkreis|circuit|||
+| Aufgabe| task|||
+| Begriff | notion |||
+| ebenes Netz | flat network| plane network ||
+| X-Kategorie | X-Kategorie | | slip of the pen, but sound awesome|
+

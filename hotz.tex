@@ -54,7 +54,7 @@ Hereby a price is assigned to each circuit.
 
 Now, the task is the following: Given $f : S^n \rightarrow S^m$, find a circuit $A$ with $\phi(A) = f$ and
 \[
-L(A) = \min_{B \in \phi^{-1}(f)} \{ L(B). \}
+L(A) = \min_{B \in \phi^{-1}(f)} \{ L(B) \}.
 \]
 
 If $f$ does not fully map to $S^n$, but only to $R \subset S^n$, then the optimium shall be searched on $\cup_{g|R=f} \phi^{-1}(g)$. 
@@ -63,5 +63,8 @@ The task is generalized in an obvioius way, if $Q(f) = Z(F) = S^n$ and $f$, as i
 
 In order to solve this problem it appears advantageous to know relations, which allow to generate from an element $A \in \phi^{-1}(f)$ all the elements from the class $\phi^{-1}(f)$.
 
-In the first two sections of this work a theory of interconnection of automata will be developed, as already sketched out in the description of the task.
+In the first two sections of this work a theory of interconnection of automata will be developed, as already sketched out in the description of the task:
+
+First, the toplological notion of a \emph{flat} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a catgory with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{X-Kategorie}.
+
 \end{document}
