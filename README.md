@@ -23,3 +23,5 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" has some his
 | Abbildung | mapping | | |
 | Vertauschung | permutation | | |
 | Relationensystem | relational system | | |
+| Streckenkomplex | Streckenkomplex | | I have no idea what that it. It seems to be part of combinatorial topology |
+

@@ -11,7 +11,7 @@
 \begin{document}
 
 \title{Electronic information processing and cybernetics - An algebrasation of the synthesis problem for circuits}
-\author{Günter Hotz}
+\author{G\"{u}nter Hotz}
 \maketitle
 
 \section{Introduction}
@@ -65,11 +65,26 @@ In order to solve this problem it appears advantageous to know relations, which 
 
 In the first two sections of this work a theory of interconnection of automata will be developed, as already sketched out in the description of the task:
 
-First, the topological notion of a \emph{flat} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a category with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{X-Kategorie}.
+First, the topological notion of a \emph{flat} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a category with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{$X$-Kategorie}.
 
-$\mathcal{R}$ reflects the interconnection of automata, but does not reflect the possibility of different building blocks with the same number of inputs and outputs. This will be accommodated by assigning symbols of the alphabet $\mathcal{U}$ to inner points of the network, respecting the functions $Q : \mathcal{U} \rightarrow N \cup {0}$ and $Z : \mathcal{U} \rightarrow N \cup {0}$. One arrives at an X-Kategorie $\mathcal{F}(\mathcal{U})$, which possesses $\mathcal{U}$ as a free generator. The elements of $\mathcal{F}(\mathcal{U})$ correspond to the set of circuits which may be yielded from $\mathcal{U}$. The mapping $\phi$, which assigns to each automaton its functions, becomes a functor $\phi:\mathcal{F}(\mathcal{U}) \rightarrow \mathcal{C}$, where $\mathcal{C}$ is the category of mappings of type $S^n \rightarrow S^m$. 
+$\mathcal{R}$ reflects the interconnection of automata, but does not reflect the possibility of different building blocks with the same number of inputs and outputs. This will be accommodated by assigning symbols of the alphabet $\mathcal{U}$ to inner points of the network, respecting the functions $Q : \mathcal{U} \rightarrow N \cup {0}$ and $Z : \mathcal{U} \rightarrow N \cup {0}$. One arrives at an $X$-Kategorie $\mathcal{F}(\mathcal{U})$, which possesses $\mathcal{U}$ as a free generator. The elements of $\mathcal{F}(\mathcal{U})$ correspond to the set of circuits which may be yielded from $\mathcal{U}$. The mapping $\phi$, which assigns to each automaton its functions, becomes a functor $\phi:\mathcal{F}(\mathcal{U}) \rightarrow \mathcal{C}$, where $\mathcal{C}$ is the category of mappings of type $S^n \rightarrow S^m$. 
 
 The introduction of the quotient category  $\mathcal{F}(\mathcal{U})/\mathcal{R}$ from $\mathcal{F}(\mathcal{U})$ to a relational system $\mathcal{R}$ forms the basis for the study of classes $\phi^{-1}(f)$. In section 3 $\phi^{-1}(f)$ will be studied for certain categories $\mathcal{F(U)}$ and distinguished functors $\phi$: We consider only generators $\mathcal{U}$ with $\{U, V, D\} \subset \subset \mathcal{U}$ and $Z(A) = 1$ for $A\in \mathcal{U} \setminus \{U, V, D\}$ and functors $\phi$, for which $\phi(U)$ is the mapping from $S$
-to $S^{\circ}$, $\phi(V)$ the permutation of the components of $S^2$, and $\phi(D)$ the diagonalisation $S \rightarrow S^2$. Such functions are called \emph{normal}. A relational system $\mathcal{R}$ will be given with the following property: For each normal $\phi$ it holds that $\phi(F) = \phi(G)$ for $F, G \in \mathcal{F}(\mathcal{U})$, iff $F\equiv G(\mathcal{R})$. $\mathcal{F}(\mathcal{U})/\mathcal{R}$ is a D-category and $\mathcal{U} \setminus \{U, V, D\}$ a free generator of the
-D-category.
+to $S^{\circ}$, $\phi(V)$ the permutation of the components of $S^2$, and $\phi(D)$ the diagonalisation $S \rightarrow S^2$. Such functions are called \emph{normal}. A relational system $\mathcal{R}$ will be given with the following property: For each normal $\phi$ it holds that $\phi(F) = \phi(G)$ for $F, G \in \mathcal{F}(\mathcal{U})$, iff $F\equiv G(\mathcal{R})$. $\mathcal{F}(\mathcal{U})/\mathcal{R}$ is a $D$-category and $\mathcal{U} \setminus \{U, V, D\}$ a free generator of the
+$D$-category.
+
+Thus, the relational system allows to simplify the representations $F$ of a function $\phi(F)$, which are possible without the knowledge of the elements in $\mathcal{U} \setminus \{ U, V, D \}$. Figure \ref{fig:figure2} shows that there are proper simplifications in this system.
+
+\begin{figure}
+\includegraphics[]{figure2.png}
+\label{fig:figure2}
+\caption{}
+\end{figure}
+
+In this work we allow an arbitrary countable set for $S$, such that these results can also be of interest for computer programming. If one wants to formally simplify programs which are constructed from sub-programs, then the number of possible sub-programs renders the specific consideration of the computed function infeasible, but the rules for the transformation of programs have to be applicable uniformly for all sub-programs. Thus, that means that the allowed relations have to be the system
+$\mathcal{R}$ or an equivalent system.
+
+For an orientation on the state of the art of the theory of circuit synthesis refer to [2], in relation to Streckenkpomplexen to [5] and category theory to [4] and [6].
+For stimulating discussions and critical remarks I want to thank J. D\"{o}rr and D. Puppe. My thanks go to the Deutsche Forschungsgemeinschaft, who has supported this study with a grant of the FRITZ-THYSSEN-foundation.
+
 \end{document}
