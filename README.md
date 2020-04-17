@@ -24,4 +24,4 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Vertauschung | permutation | | |
 | Relationensystem | relational system | | |
 | Streckenkomplex | Streckenkomplex | | I have no idea what that is. It seems to be part of combinatorial topology |
-
+| Gebilde | structure| | |
