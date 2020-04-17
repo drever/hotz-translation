@@ -13,7 +13,8 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Schaltkreis|circuit|||
 | Aufgabe| task|||
 | Begriff | notion |||
-| ebenes Netz | flat network| plane network ||
+| ebenes Netz | planar network| ||
+| eben | planar | | ||
 | X-Kategorie | X-Kategorie | | slip of the pen, but sounds awesome|
 | Zusammenschalten (von Automaten) | interconnection of automata | | |
 | Baustein | building block| | |
@@ -24,4 +25,17 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Vertauschung | permutation | | |
 | Relationensystem | relational system | | |
 | Streckenkomplex | Streckenkomplex | | I have no idea what that is. It seems to be part of combinatorial topology |
+| Strecke | line segment | | |
 | Gebilde | structure| | |
+| Kurvenzug | curve | [spline](https://www.linguee.de/deutsch-englisch/uebersetzung/kurvenzug.html) | |
+| Rahmen des Netzes | network frame | | |
+| Anfangspunkte | starting points | | |
+| innere Punkte | inner points | | |
+| Endpunkte | end points | | |
+| Selbstdurchdringung | self penetration | | |
+| Zwischenlage | intermediate position | | |
+| Dreieckdeformationen | triangular deformations | | |
+| ansetzen | join | | |
+| aneinander setzen | set along each other  
+| Zusammensetzung der Netze | combination of networks | | |
+| direktes Product | direct product | | |

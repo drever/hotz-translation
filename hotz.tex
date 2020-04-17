@@ -7,6 +7,9 @@
     \usepackage{graphicx}    
     % Related to math
     \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+    \newtheorem{theorem}{Theorem}
+
 \begin{document}
 
 \setcounter{section}{-1}
@@ -32,8 +35,8 @@ An element of $\mathcal{U}$ is a circuit. If $A$ and $B$ are circuits with $Q(A)
 
 \begin{figure}
 \includegraphics[]{figure1.png}
-\label{fig:figure1}
 \caption{}
+\label{fig:figure1}
 \end{figure}
 
 If $Z(A) = Q(B)$ we get from $A$ and $B$ a circuit $B\circ A$ by switching the $i$-th output of $A$ to the $i$-th input of $B$.
@@ -66,7 +69,7 @@ In order to solve this problem it appears advantageous to know relations, which 
 
 In the first two sections of this work a theory of interconnection of automata will be developed, as already sketched out in the description of the task:
 
-First, the topological notion of a \emph{flat} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a category with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{$X$-Kategorie}.
+First, the topological notion of a \emph{planar} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a category with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{$X$-Kategorie}.
 
 $\mathcal{R}$ reflects the interconnection of automata, but does not reflect the possibility of different building blocks with the same number of inputs and outputs. This will be accommodated by assigning symbols of the alphabet $\mathcal{U}$ to inner points of the network, respecting the functions $Q : \mathcal{U} \rightarrow N \cup {0}$ and $Z : \mathcal{U} \rightarrow N \cup {0}$. One arrives at an $X$-Kategorie $\mathcal{F}(\mathcal{U})$, which possesses $\mathcal{U}$ as a free generator. The elements of $\mathcal{F}(\mathcal{U})$ correspond to the set of circuits which may be yielded from $\mathcal{U}$. The mapping $\phi$, which assigns to each automaton its functions, becomes a functor $\phi:\mathcal{F}(\mathcal{U}) \rightarrow \mathcal{C}$, where $\mathcal{C}$ is the category of mappings of type $S^n \rightarrow S^m$. 
 
@@ -78,8 +81,8 @@ Thus, the relational system allows to simplify the representations $F$ of a func
 
 \begin{figure}
 \includegraphics[]{figure2.png}
-\label{fig:figure2}
 \caption{}
+\label{fig:figure2}
 \end{figure}
 
 In this work we allow an arbitrary countable set for $S$, such that these results can also be of interest for computer programming. If one wants to formally simplify programs which are constructed from sub-programs, then the number of possible sub-programs renders the specific consideration of the computed function infeasible, but the rules for the transformation of programs have to be applicable uniformly for all sub-programs. Thus, that means that the allowed relations have to be the system
@@ -88,9 +91,84 @@ $\mathcal{R}$ or an equivalent system.
 For an orientation on the state of the art of the theory of circuit synthesis refer to [2], in relation to Streckenkpomplexen to [5] and category theory to [4] and [6].
 For stimulating discussions and critical remarks I want to thank J. D\"{o}rr and D. Puppe. My thanks go to the Deutsche Forschungsgemeinschaft, who has supported this study with a grant of the FRITZ-THYSSEN-foundation.
 
-\section{The category of flat networks }
-\subsection{The category $\mathcal{R}$ of flat networks}
+\section{The category of planar networks }
+\subsection{The category $\mathcal{R}$ of planar networks}
 The following topological structure is understood as a network with $n$ inputs and $m$ outputs ($n, m = 0, 1, 2...$):
 A rectangle with sides $g_1, g_2$ and $h_1, h_2$ is given in the euclidean plane, where both $g_i$ and $h_i$ lie face to face to each other. $A_1 \ldots A_n$ ($B_1 \ldots B_n$) are mutually distinct points on $g_1$ ($g_2$), where the numbering of points runs from $h_1$ to $h_2$; the $A_i$ ($B_i$) divide $g_1$ ($g_2$) into equidistant parts. 
+Let $A_i$ be the starting points and $B_i$ be the endpoints of precisely one line segment of an oriented, finite, planar Streckenkomplex, which lies in the euclidean plane without crossings in the rectangle \footnote{In the euclidean sense it is a matter of piecewise linear curves. }. We further demand from the Streckenkomplex that each of its line segments simply lie above $h_i$ and that the orientation of the line segments points from $g_1$ to $g_2$. Thus the case in figure \ref{fig:figure3} is
+excluded.
+\begin{figure}
+\includegraphics[]{figure3.png}
+\caption{}
+\label{fig:figure3}
+\end{figure}
+
+We call $g_1, g_2, h_1, h_2$ the network frame, $A_1, \ldots, A_n$ ($B_1, \ldots, B_m$) the \emph{starting points} or inputs (\emph{end points} or outputs) of the network. The points which are neither inputs nor outputs are called \emph{inner points} of the network.
+
+Two networks are called equal, if they can be - after overlaying their frames without self-penetration in the plane - deformed into one another, in such a way that all intermediate positions are networks. 
+
+We understand a \emph{deformation} as an \emph{elementary deformation} or a deformation, which may be generated by a chain of elementary deformations; the elementary deformations are triangular deformations (figure \ref{fig:figure4}a) or generalised triangular deformations, as shown on figure \ref{fig:figure4}b and \ref{fig:figure4}c. Further the (trivial) deformations are allowed, which are stretches of the frame or euclidean motions of the network.
+\begin{figure}
+\includegraphics[]{figure4.png}
+\caption{}
+\label{fig:figure4}
+\end{figure}
+
+One recognises that the given equivalence definition is reflexive, symmetric and transitive, i.e. a division of the network into equivalence classes. 
+
+From now on we call this class a network and call networks in the conventional sense, when a distinction is important, \emph{representative} of a network.
+
+Different representatives of a network have the same number of inputs and outputs, which we denote by $Q(N)$ and $Z(N)$.
+
+Let $N_1$ and $N_2$ be networks with $Q(N_2)=Z(N_1)$, then we declare between $N_1$ and $N_2$ a composition over representatives $N_1^{'}$ and $N_2^{'}$ from $N_1$ and $N_2$: 
+
+We deform the frame of $N_2^{'}$ (in a trivial manner), such that we can join $N_2^{'}$ onto $N_1{'}$; i.e. we bring $g_2$ and $g_1^{'}$ to the same size and set both frames along $g_2$ and $g_1^{'}$ against each other (figure \ref{fig:figure5}). We remove $g_2 = g_1^{'}$ and the points $A_i^{'} = B_i$ and get again a network representative, that we call $N_2 \circ N_1$. One sees that the definition is independent of the choice of representatives. 
+
+\begin{figure}
+\includegraphics[]{figure5.png}
+\caption{}
+\label{fig:figure5}
+\end{figure}
+
+Further the following holds:
+
+\[
+\begin{array}{lcr}
+Q(N_2 \circ N_1) & = & Q(N_1), \\
+Z(N_2 \circ N_1) & = & Z(N_2).
+\end{array}
+\]
+
+As is shown easily, the product is associative; i.e. it holds for networks $N_1, N_2, N_3$ with $Q(N_2) = Z(N_1)$ and $Q(N_3) = Z(N_2)$ that
+\[ (N_3 \circ N_2) \circ N_1 = N_3 \circ (N_2 \circ N_1). \]
+
+For each network with $Q(N) = n$ and $Z(N) = m$ there is exactly one network $E_n$ and $E_m$ with the property
+
+\[
+N\circ E_n = E_m \circ N = N;
+\]
+
+$E_n$ is a network with $n$ inputs, $n$ outputs and $n$ line segments (figure \ref{fig:figure6}). The set of networks therefore forms a category with respect to "$\circ$".
+
+\begin{figure}
+\includegraphics[]{figure6.png}
+\caption{}
+\label{fig:figure6}
+\end{figure}
+
+We declare a further combination of networks, namely the \emph{X-product}. Let $N_1^{'}$ and $N_2^{'}$ be representatives of the networks $N_1$ and respectively $N_2$, then we deform the frame to the same length and set them along $h_{12}$ and $h_{21}$ together (figure \ref{fig:figure7}). Subsequently we delete $h_{21}=h_{12}$ and numbering the inputs from left to right. If we take care that the input- and output-points of the structure are again equidistant, then we have again a representative
+of a network $N_3$. We call $N_3$ the direct product of $N_1$ and $N_2$ and write $N_3 = N1 \times N_2$. One sees that the direct product is independent of the choice of the representative, associative, and that $E_k = E_1 \times \ldots \times E_1$ ($k$-times), and $E_0 \times N = N \times N_0 = N$ for every network $N$.
+
+We call the set of networks with these two connections with $\mathcal{R}$. We summarize the results into
+
+\begin{theorem}
+$\mathcal{R}$ forms a category with respect to "$\circ$" and a semi-group with respect to "$\times$".
+\end{theorem}
+
+\begin{figure}
+\includegraphics[]{figure7.png}
+\caption{}
+\label{fig:figure7}
+\end{figure}
 
 \end{document}
