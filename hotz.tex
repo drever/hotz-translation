@@ -71,10 +71,11 @@ In the first two sections of this work a theory of interconnection of automata w
 
 First, the topological notion of a \emph{planar} network is introduced. The binary operators "$\circ$" and "$\times$" will be explained for these networks. One obtains an algebraic structure $\mathcal{R}$, which is a category with respect to "$\circ$" and a semi-group with respect to "$\times$". $\mathcal{R}$ turns out to be a generalisation of the D-category (category with direct products), which we want to call \emph{$X$-Kategorie}.
 
-$\mathcal{R}$ reflects the interconnection of automata, but does not reflect the possibility of different building blocks with the same number of inputs and outputs. This will be accommodated by assigning symbols of the alphabet $\mathcal{U}$ to inner points of the network, respecting the functions $Q : \mathcal{U} \rightarrow N \cup {0}$ and $Z : \mathcal{U} \rightarrow N \cup {0}$. One arrives at an $X$-Kategorie $\mathcal{F}(\mathcal{U})$, which possesses $\mathcal{U}$ as a free generator. The elements of $\mathcal{F}(\mathcal{U})$ correspond to the set of circuits which may be yielded from $\mathcal{U}$. The mapping $\phi$, which assigns to each automaton its functions, becomes a functor $\phi:\mathcal{F}(\mathcal{U}) \rightarrow \mathcal{C}$, where $\mathcal{C}$ is the category of mappings of type $S^n \rightarrow S^m$. 
+$\mathcal{R}$ reflects the interconnection of automata, but does not reflect the possibility of different building blocks with the same number of inputs and outputs. This will be accommodated by assigning symbols of the alphabet $\mathcal{U}$ to inner points of the network, respecting the functions $Q : \mathcal{U} \rightarrow N \cup {0}$ and $Z : \mathcal{U} \rightarrow N \cup {0}$. One arrives at an $X$-Kategorie $\mathcal{F}(\mathcal{U})$, which possesses $\mathcal{U}$ as a free family of
+generators. The elements of $\mathcal{F}(\mathcal{U})$ correspond to the set of circuits which may be yielded from $\mathcal{U}$. The mapping $\phi$, which assigns to each automaton its functions, becomes a functor $\phi:\mathcal{F}(\mathcal{U}) \rightarrow \mathcal{C}$, where $\mathcal{C}$ is the category of mappings of type $S^n \rightarrow S^m$. 
 
-The introduction of the quotient category  $\mathcal{F}(\mathcal{U})/\mathcal{R}$ from $\mathcal{F}(\mathcal{U})$ to a relational system $\mathcal{R}$ forms the basis for the study of classes $\phi^{-1}(f)$. In section 3 $\phi^{-1}(f)$ will be studied for certain categories $\mathcal{F(U)}$ and distinguished functors $\phi$: We consider only generators $\mathcal{U}$ with $\{U, V, D\} \subset \subset \mathcal{U}$ and $Z(A) = 1$ for $A\in \mathcal{U} \setminus \{U, V, D\}$ and functors $\phi$, for which $\phi(U)$ is the mapping from $S$
-to $S^{\circ}$, $\phi(V)$ the permutation of the components of $S^2$, and $\phi(D)$ the diagonalisation $S \rightarrow S^2$. Such functions are called \emph{normal}. A relational system $\mathcal{R}$ will be given with the following property: For each normal $\phi$ it holds that $\phi(F) = \phi(G)$ for $F, G \in \mathcal{F}(\mathcal{U})$, iff $F\equiv G(\mathcal{R})$. $\mathcal{F}(\mathcal{U})/\mathcal{R}$ is a $D$-category and $\mathcal{U} \setminus \{U, V, D\}$ a free generator of the
+The introduction of the quotient category  $\mathcal{F}(\mathcal{U})/\mathcal{R}$ from $\mathcal{F}(\mathcal{U})$ to a relational system $\mathcal{R}$ forms the basis for the study of classes $\phi^{-1}(f)$. In section 3 $\phi^{-1}(f)$ will be studied for certain categories $\mathcal{F(U)}$ and distinguished functors $\phi$: We consider only families of generators $\mathcal{U}$ with $\{U, V, D\} \subset \subset \mathcal{U}$ and $Z(A) = 1$ for $A\in \mathcal{U} \setminus \{U, V, D\}$ and functors $\phi$, for which $\phi(U)$ is the mapping from $S$
+to $S^{\circ}$, $\phi(V)$ the permutation of the components of $S^2$, and $\phi(D)$ the diagonalisation $S \rightarrow S^2$. Such functions are called \emph{normal}. A relational system $\mathcal{R}$ will be given with the following property: For each normal $\phi$ it holds that $\phi(F) = \phi(G)$ for $F, G \in \mathcal{F}(\mathcal{U})$, iff $F\equiv G(\mathcal{R})$. $\mathcal{F}(\mathcal{U})/\mathcal{R}$ is a $D$-category and $\mathcal{U} \setminus \{U, V, D\}$ a free family of generators of the
 $D$-category.
 
 Thus, the relational system allows to simplify the representations $F$ of a function $\phi(F)$, which are possible without the knowledge of the elements in $\mathcal{U} \setminus \{ U, V, D \}$. Figure \ref{fig:figure2} shows that there are proper simplifications in this system.
@@ -171,4 +172,43 @@ $\mathcal{R}$ forms a category with respect to "$\circ$" and a semi-group with r
 \label{fig:figure7}
 \end{figure}
 
+\subsection{The free family of generators of $\mathcal{R}$}
+
+We now want to specify a family of generators for $\mathcal{R}$, i.e. the set $\mathcal{C}$ of networks, from which all networks of $\mathcal{R}$ can be obtained by application of the operations of $\mathcal{R}$.
+
+It is possible to bring each representative of a network into a position in which at most one inner point lies on a parallel to $g_1$. Thus, $N$ may be obtained as a product of networks, which each possess one inner point, expect the case that $N$ does not possess an inner point, thus it is a unit (figure \ref{fig:figure8}).
+
+\begin{figure}
+\includegraphics[]{figure8.png}
+\caption{}
+\label{fig:figure8}
+\end{figure}
+
+Each network $N$ with exactly one inner point can be factored into a direct product 
+\[
+N = E_k \times F \times E_m
+\]
+
+where $F$ contains the inner point and each line segment of $F$ possesses this point as start- and end-point (figure \ref{fig:figure9}). Potentially $k = 0$ or $m = 0$. $F$ is completely determined by the number of its inputs and outputs. If $F$ has $n$ inputs and $m$ outputs we write $\gamma_m^n$ for $F$.
+
+\begin{figure}
+\includegraphics[]{figure9.png}
+\caption{}
+\label{fig:figure9}
+\end{figure}
+
+Thereby we have
+
+\begin{theorem}
+The set $\mathcal{C} = \{ \gamma_m^n | n, m = 0, 1, \ldots \}$ is a complete family of generators of $\mathcal{R}$
+\end{theorem}
+
+One recognizes further that the family of generators is minimal, since no generators can be expressed in termes of other generators. $\mathcal{C}$ is also the only minimal family of generators of $\mathcal{R}$, because no generator can be expressed through other elements of $\mathcal{R}$ other than through itself; the latter follows, because the number of inner points of a product are equal to the sum of inner points of the factors. Later (section \ref{basis-function-representation}) we will show that $\mathcal{C}$ is
+a free family of generators.
+
+The presentation of a network $N$ in this form is called a \emph{sequential presentation} of $N$. The same sequential presentations naturally define the same network, but the same network allows different sequential presentations. The next section will provide information on the different presentations of a network.
+
+\section{Definition of categories by a direct product through generators and defining relations}
+\subsection{Representation of functions with basis functions}
+\label{basis-function-representation}
 \end{document}
