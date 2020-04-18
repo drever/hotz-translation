@@ -43,7 +43,8 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Einheit | unit | | |
 | sequentielle Darstellung eines Netzes | sequential presentation of a network | | |
 
-##License 
+## License 
+
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
