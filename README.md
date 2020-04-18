@@ -42,12 +42,12 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | direktes Product | direct product | | |
 | Einheit | unit | | |
 | sequentielle Darstellung eines Netzes | sequential presentation of a network | | |
-Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
-
-This work is licensed under a [Creative Commons Attribution 4.0 International
-License][cc-by].
 
 ##License 
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+
 [![CC BY 4.0][cc-by-image]][cc-by]
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
