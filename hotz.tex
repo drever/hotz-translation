@@ -221,7 +221,9 @@ for $k, m, n = 0, 1, 2, \ldots$ (see figure \ref{fig:figure10}).
 
 \begin{figure}
 \includegraphics[]{figure10.png}
-\caption{$(E_{n+k} \times \gamma_j^l) \circ (\gamma_n^m \times E_{k + l}) = (\gamma_n^m \times E_{k+j}) \circ (E_{m+k} \times \gamma_j^l)$ }
+\caption{
+  $(E_{3} \times \gamma_2^1) \circ (\gamma_2^2 \times E_{3}) = (\gamma_2^2 \times E_{2}) \circ (E_{3} \times \gamma_2^1)$ 
+}
 \label{fig:figure10}
 \end{figure}
 
@@ -248,10 +250,19 @@ One sees that the relations (\ref{eq:R1}) are contained in (\ref{eq:R2}).
 \label{fig:figure11}
 \end{figure}
 
+\begin{theorem}
+Two presentations $H_1$ and $H_2$ of the same network in the generator family $\mathcal{C}$ under the usage of connections of $\mathcal{R}$ can be transformed via (\ref{eq:R2}) into each other.
+\end{theorem}
+\begin{proof}
+It is apparent that every presentation can be transformed into a sequential presentation with (\ref{eq:R2}). For each sequential presentation of a network a presentation of the network may be assigned, such that exactly these sequential presentations may be recovered by cutting through parallels to $g$.
+\end{proof}
 
-
-
-
+Following the previous results, we may suppose that $H_1$ and $H_2$ are sequential presentations of the same network. Let $N_1^{'}$ and $N_2^{'}$ be assigned to $H_1$ and $H_2$ in the previously described manner. After defining equality $N_1^{'}$ may be deformed into $N_2^{'}$. Each step of deformation may be divided into sub-deformations such that the order of at most two points of the network is changed, because no two points in $N_1$ by construction lie on a parallel to $g$. The sequential
+presentation of the network stays the same, if the order of points is not changed. If it is changed we consider the two corresponding factors of the sequential product. These shall have the form
+\[
+(E_t \times \gamma_n^m \times E_s) \circ (E_r \times \gamma_j^l \times E_q).
+\]
+Using (\ref{eq:R2})
 
 
 \section{Definition of categories by a direct product through generators and defining relations}
