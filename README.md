@@ -43,7 +43,8 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | direktes Product | direct product | | |
 | Einheit | unit | | |
 | sequentielle Darstellung eines Netzes | sequential presentation of a network | | |
-
+| Gundseite | base | | |
+| Abänderung | modification | | |
 ## License 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
