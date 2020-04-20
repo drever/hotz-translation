@@ -262,7 +262,28 @@ presentation of the network stays the same, if the order of points is not change
 \[
 (E_t \times \gamma_n^m \times E_s) \circ (E_r \times \gamma_j^l \times E_q).
 \]
-Using (\ref{eq:R2})
+We can separate the common $E$-factors on both sides using (\ref{eq:R2}); Because of the exchangeability of order of the points the term can be transformed into the form
+\[
+  E_u \times ((\gamma_n^m \times E_{k+j}) \circ (E_{m+k} \times \gamma_j^l)) \times E_v,
+\]
+
+or into the form which correspond to the other two points in question. Now we apply (\ref{eq:R1}) and obtain a presentation, which corresponds to the permutation of points after the deformation. Using (\ref{eq:R2}) we bring the presentation back to the sequential form. By deforming $N_1^{'}$ step by step into $N_2^{'}$ and each time applying the transformations of the sequential presentations just described, $H_1$ is transformed via (\ref{eq:R1}) and (\ref{eq:R2}) into $H_2$, q.e.d.
+
+We will often use subsequently the following relations derived from (\ref{eq:R2}):
+\begin{equation}
+\label{eq:R2prime}
+\tag{R2\'}
+\left.
+  \begin{array}{c}
+  F \times G = (F \circ E_m) \times G = (F\times E_j) \circ (E_m \times G), \\
+    (F \times G) = (E_n \circ F) \times G = (E_n \times G) \circ (F \times E_k)
+\end{array}
+\right\}
+\end{equation}
+
+with $k = Q(G), j = Z(G), m = Q(F), n = Z(F)$.
+
+Subsequently we call a category $\mathcal{F}$, which forms a semi-group with respect to a further composition "$\times$", and whose elements meet the relation (\ref{eq:R2}) an \emph{$X$-Kategorie}. 
 
 
 \section{Definition of categories by a direct product through generators and defining relations}
