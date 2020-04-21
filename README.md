@@ -37,6 +37,7 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Lage | position | | |
 | Dreieckdeformationen | triangular deformations | | |
 | Deformation | deformation | | |
+| Deformationskette | chain of deformation | | |
 | ansetzen | join | | |
 | aneinander setzen | set along each other  
 | Zusammensetzung der Netze | combination of networks | | |

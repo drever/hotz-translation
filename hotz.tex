@@ -9,6 +9,8 @@
     \usepackage{amsmath,amssymb,amsfonts,amsthm}
 
     \newtheorem{theorem}{Theorem}
+    \newtheorem{lemma}{Lemma}
+    \newtheorem*{definition}{Definition}
 
 \begin{document}
 
@@ -317,6 +319,29 @@ Otherwise we can perform a transposition of the corresponding factors in the seq
 In order to simplify a later proof we want to describe the modifications of sequential presentations a bit more formally. 
 These modifications of the sequential presentation are described uniquely by the declaration of the two factors, which concern the modifications of the order, if the point of the upper factor is a starting point or the point of the lower factor is an endpoint of at least one line segment. 
 If the $i$-th factor of the presentation $H$ is transposed with the $(i + 1)$-th factor as described before and if the result of the sequential presentation is $H^{'}$, then we write $H^{'} = v_{i} H$.
+
+In order to ensure the uniqueness condition of $v_i H$ we introduce the \emph{premise} \emph{for this section} that for the network under consideration each point is either starting point or each point is end point of at least one line segment. 
+This is the precondition of the aspired theorem 5.
+
+A sequence 
+\[
+  H_1, H_2 = v_i H_1, \ldots , H_j = v_{i_{j-1}} H_{j-1}.
+\]
+
+of sequential presentations is called a chain of deformations. We also write $H_j = v H$ with $v = [v_{i_1}, \ldots v_{i_{j-1}}]$. 
+
+From the proof of theorem 4 follows:
+
+\begin{lemma}
+If $H$ and $H^{'}$ are sequential presentations of the same network, then there is a chain of deformations $v$ with $H^{'} = v H$; in doing so we permit the empty word $e$ and define $eH = H$.
+\end{lemma}
+
+One regognizes: If $H^{'} = v_i H$, then $v_i H^{'}$ is also explained, and $H = v_i H^{'} == [v_i, v_i] H$.
+
+\begin{definition}
+A chain of deformations is called \emph{reduced} if no pair $[v_i, v_i]$ does occur on $v$. We say that $v^{'}$ arises by reduction, if $v^{'}$ is obtainable through cancellation of pairs $[v_i, v_i]$ from $v$.
+\end{definition}
+
 
 \section{Definition of categories by a direct product through generators and defining relations}
 \subsection{Representation of functions with basis functions}
