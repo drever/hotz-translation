@@ -46,6 +46,8 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | sequentielle Darstellung eines Netzes | sequential presentation of a network | | |
 | Gundseite | base | | |
 | Abänderung | modification | | |
+| Weg | path | | |
+| Teilfolge | subsequence | | |
 ## License 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]

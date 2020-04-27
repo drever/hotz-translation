@@ -70,12 +70,12 @@ A circuit of elements of $\mathcal{U}$ is a device, which is described inductive
 
 If $\phi(A)$ ($\phi(B)$) is the function of circuit $A$ ($B$), then $\phi(A)\times \phi(B)$ is the function of $A\times B$, and $\phi(B)\circ \phi(A)$ for $Q(B) = Z(A)$  is the function of $B\circ A$.
 
-The costs for the building blocks in $\mathcal{U}$ shall be defined by the function $L : \mathcal{U} \rightarrow N \cup {0}$. We define:
+The costs for the building blocks in $\mathcal{U}$ shall be defined by the function $L : \mathcal{U} \rightarrow N \cup \{0\}$. We define:
 
 \[
 \begin{array}{lcr}
 L(A\times B) & = & L(A) + L(B), \\
-L(A\circ B) & = & L(A) + L(B).
+L(B\circ A) & = & L(A) + L(B).
 \end{array}
 \]
 
@@ -146,9 +146,9 @@ From now on we call this class a network and call networks in the conventional s
 
 Different representatives of a network have the same number of inputs and outputs, which we denote by $Q(N)$ and $Z(N)$.
 
-Let $N_1$ and $N_2$ be networks with $Q(N_2)=Z(N_1)$, then we declare between $N_1$ and $N_2$ a composition over representatives $N_1^{'}$ and $N_2^{'}$ from $N_1$ and $N_2$: 
+Let $N_1$ and $N_2$ be networks with $Q(N_2)=Z(N_1)$, then we declare between $N_1$ and $N_2$ a composition over representatives $N_1^{\prime}$ and $N_2^{\prime}$ from $N_1$ and $N_2$: 
 
-We deform the frame of $N_2^{'}$ (in a trivial manner), such that we can join $N_2^{'}$ onto $N_1{'}$; i.e. we bring $g_2$ and $g_1^{'}$ to the same size and set both frames along $g_2$ and $g_1^{'}$ against each other (figure \ref{fig:figure5}). We remove $g_2 = g_1^{'}$ and the points $A_i^{'} = B_i$ and get again a network representative, that we call $N_2 \circ N_1$. One sees that the definition is independent of the choice of representatives. 
+We deform the frame of $N_2^{\prime}$ (in a trivial manner), such that we can join $N_2^{\prime}$ onto $N_1{\prime}$; i.e. we bring $g_2$ and $g_1^{\prime}$ to the same size and set both frames along $g_2$ and $g_1^{\prime}$ against each other (figure \ref{fig:figure5}). We remove $g_2 = g_1^{\prime}$ and the points $A_i^{\prime} = B_i$ and get again a network representative, that we call $N_2 \circ N_1$. One sees that the definition is independent of the choice of representatives. 
 
 \begin{figure}
 \includegraphics[]{figure5.png}
@@ -182,7 +182,7 @@ $E_n$ is a network with $n$ inputs, $n$ outputs and $n$ line segments (figure \r
 \label{fig:figure6}
 \end{figure}
 
-We declare a further combination of networks, namely the \emph{X-product}. Let $N_1^{'}$ and $N_2^{'}$ be representatives of the networks $N_1$ and respectively $N_2$, then we deform the frame to the same length and set them along $h_{12}$ and $h_{21}$ together (figure \ref{fig:figure7}). Subsequently we delete $h_{21}=h_{12}$ and numbering the inputs from left to right. If we take care that the input- and output-points of the structure are again equidistant, then we have again a representative
+We declare a further combination of networks, namely the \emph{X-product}. Let $N_1^{\prime}$ and $N_2^{\prime}$ be representatives of the networks $N_1$ and respectively $N_2$, then we deform the frame to the same length and set them along $h_{12}$ and $h_{21}$ together (figure \ref{fig:figure7}). Subsequently we delete $h_{21}=h_{12}$ and numbering the inputs from left to right. If we take care that the input- and output-points of the structure are again equidistant, then we have again a representative
 of a network $N_3$. We call $N_3$ the direct product of $N_1$ and $N_2$ and write $N_3 = N1 \times N_2$. One sees that the direct product is independent of the choice of the representative, associative, and that $E_k = E_1 \times \ldots \times E_1$ ($k$-times), and $E_0 \times N = N \times N_0 = N$ for every network $N$.
 
 We call the set of networks with these two connections with $\mathcal{R}$. We summarize the results into
@@ -282,7 +282,7 @@ Two presentations $H_1$ and $H_2$ of the same network in the generator family $\
 It is apparent that every presentation can be transformed into a sequential presentation with (\ref{eq:R2}). For each sequential presentation of a network a presentation of the network may be assigned, such that exactly these sequential presentations may be recovered by cutting through parallels to $g$.
 \end{proof}
 
-Following the previous results, we may suppose that $H_1$ and $H_2$ are sequential presentations of the same network. Let $N_1^{'}$ and $N_2^{'}$ be assigned to $H_1$ and $H_2$ in the previously described manner. After defining equality $N_1^{'}$ may be deformed into $N_2^{'}$. Each step of deformation may be divided into sub-deformations such that the order of at most two points of the network is changed, because no two points in $N_1$ by construction lie on a parallel to $g$. The sequential
+Following the previous results, we may suppose that $H_1$ and $H_2$ are sequential presentations of the same network. Let $N_1^{\prime}$ and $N_2^{\prime}$ be assigned to $H_1$ and $H_2$ in the previously described manner. After defining equality $N_1^{\prime}$ may be deformed into $N_2^{\prime}$. Each step of deformation may be divided into sub-deformations such that the order of at most two points of the network is changed, because no two points in $N_1$ by construction lie on a parallel to $g$. The sequential
 presentation of the network stays the same, if the order of points is not changed. If it is changed we consider the two corresponding factors of the sequential product. These shall have the form
 \[
 (E_t \times \gamma_n^m \times E_s) \circ (E_r \times \gamma_j^l \times E_q).
@@ -292,7 +292,7 @@ We can separate the common $E$-factors on both sides using (\ref{eq:R2}); Becaus
   E_u \times ((\gamma_n^m \times E_{k+j}) \circ (E_{m+k} \times \gamma_j^l)) \times E_v,
 \]
 
-or into the form which correspond to the other two points in question. Now we apply (\ref{eq:R1}) and obtain a presentation, which corresponds to the permutation of points after the deformation. Using (\ref{eq:R2}) we bring the presentation back to the sequential form. By deforming $N_1^{'}$ step by step into $N_2^{'}$ and each time applying the transformations of the sequential presentations just described, $H_1$ is transformed via (\ref{eq:R1}) and (\ref{eq:R2}) into $H_2$, q.e.d.
+or into the form which correspond to the other two points in question. Now we apply (\ref{eq:R1}) and obtain a presentation, which corresponds to the permutation of points after the deformation. Using (\ref{eq:R2}) we bring the presentation back to the sequential form. By deforming $N_1^{\prime}$ step by step into $N_2^{\prime}$ and each time applying the transformations of the sequential presentations just described, $H_1$ is transformed via (\ref{eq:R1}) and (\ref{eq:R2}) into $H_2$, q.e.d.
 
 We will often use subsequently the following relations derived from (\ref{eq:R2}):
 \begin{equation}
@@ -318,7 +318,7 @@ If the order of points stayed the same, then the sequential presentation stayed 
 Otherwise we can perform a transposition of the corresponding factors in the sequential presentation through the application of relations from (\ref{eq:R1}) and (\ref{eq:R2}). 
 In order to simplify a later proof we want to describe the modifications of sequential presentations a bit more formally. 
 These modifications of the sequential presentation are described uniquely by the declaration of the two factors, which concern the modifications of the order, if the point of the upper factor is a starting point or the point of the lower factor is an endpoint of at least one line segment. 
-If the $i$-th factor of the presentation $H$ is transposed with the $(i + 1)$-th factor as described before and if the result of the sequential presentation is $H^{'}$, then we write $H^{'} = v_{i} H$.
+If the $i$-th factor of the presentation $H$ is transposed with the $(i + 1)$-th factor as described before and if the result of the sequential presentation is $H^{\prime}$, then we write $H^{\prime} = v_{i} H$.
 
 In order to ensure the uniqueness condition of $v_i H$ we introduce the \emph{premise} \emph{for this section} that for the network under consideration each point is either starting point or each point is end point of at least one line segment. 
 This is the precondition of the aspired theorem 5.
@@ -333,14 +333,82 @@ of sequential presentations is called a chain of deformations. We also write $H_
 From the proof of theorem 4 follows:
 
 \begin{lemma}
-If $H$ and $H^{'}$ are sequential presentations of the same network, then there is a chain of deformations $v$ with $H^{'} = v H$; in doing so we permit the empty word $e$ and define $eH = H$.
+If $H$ and $H^{\prime}$ are sequential presentations of the same network, then there is a chain of deformations $v$ with $H^{\prime} = v H$; in doing so we permit the empty word $e$ and define $eH = H$.
 \end{lemma}
 
-One regognizes: If $H^{'} = v_i H$, then $v_i H^{'}$ is also explained, and $H = v_i H^{'} == [v_i, v_i] H$.
+One regognizes: If $H^{\prime} = v_i H$, then $v_i H^{\prime}$ is also explained, and $H = v_i H^{\prime} == [v_i, v_i] H$.
 
 \begin{definition}
-A chain of deformations is called \emph{reduced} if no pair $[v_i, v_i]$ does occur on $v$. We say that $v^{'}$ arises by reduction, if $v^{'}$ is obtainable through cancellation of pairs $[v_i, v_i]$ from $v$.
+A chain of deformations is called \emph{reduced} if no pair $[v_i, v_i]$ does occur on $v$. We say that $v^{\prime}$ arises by reduction, if $v^{\prime}$ is obtainable through cancellation of pairs $[v_i, v_i]$ from $v$.
 \end{definition}
+
+It immediatly follows 
+
+\begin{lemma}
+ $v$ describes a chain of deformation of $H$ and $v^{\prime}$ is derived from $v$ by reduction. If $H^{\prime} = vH$, then also $H^{\prime} = v^{\prime}H$.
+\end{lemma}
+
+We now observe the "path" the first factor of a sequential presentation (the rightmost factor, or the uppermost point of the corresponding presentation) travels during a deformation.
+
+We let
+\[
+  \begin{array}{rcl}
+    h(0) =  1 & = & \mbox{Place of the first factor before the first deformation; }\\
+    h(l) (0 \leq l \le j) & = & \mbox{Place of the first factor after the $l$-th deformation.}
+  \end{array}
+\]
+
+And find:
+\[
+  h(l+1)= \begin{cases}
+           h(l),     & \mbox{ if $i_{l+1} \neq h(l), h(l) - 1$;} \\
+           h(l) + 1, & \mbox{ if $i_{l+1} = h(l)$;} \\
+           h(l) -1,  & \mbox{ if $i_{l+1} = h(l) - 1$;}
+          \end{cases}
+\]
+
+where $v = [v_i, \ldots, v_j]$ describes the considered chain of deformation. 
+
+\begin{lemma}
+  If $h(l) \neq h(l + 1)$ for $l = 0, \ldots, k - 1$ ($\geq 0$) and if $h(0) = h(k)$ is the chain of deformation $v$ of $H$, then $v$ is not reduced. 
+\end{lemma}
+
+\begin{proof}
+  Let $v = [v_{i_1}, \ldots , v_{i_k}]$. Since $k \geq 1$ and $h(l) \neq h(l + 1)$ there exists a $j$ with $h(j) \geq 1$ and $h(j)$ is maximal. Then $h(j) = j(j + 1) + 1$ and $v_{i_j} = v_{i_{j+1}}$ and so $v$ is not reduced.
+\end{proof}
+
+\begin{lemma}
+  \begin{enumerate}
+    \item If $v = [v_i, v_k]$ with $i \neq k \pm 1$ is a chain of deformation of $H$, then $v^{\prime} = v_k, v_i]$ is a also a chain of deformation for $H$, and $vH =v^{\prime}H$.
+    \item If $v = [v_i, v_{i+1}, v_i]$ and $v^{\prime}=[v_{i+1}, v_i, v_{i+1}]$, then $v$ is defined for $H$ iff $v^{\prime}$ is defined for $H$ and $vH = v^{\prime}H$ holds.
+    \item Let $v^{\prime}$ be a subsequence of $v$ and let $v^{''}$ be defined for a sequential presentation $H_1$, iff this holds for $v^{\prime}$, and let $v^{\prime}H_1 = v^{''} H_1$. 
+          Let $v^{+}$ be obtained by replacing $v^{\prime}$ with $v^{\prime \prime}$, then $v$ and $v^{+}$ are declared for the exact same sequential presentation, and it holds, 
+          if $v$ is defined for $H$, $v H = v ^{+} H$.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  (1) and (2) are evident by geometry. (3) follows from figure \ref{fig:figure12}, where $[v_1, v^{\prime}, v_2] = v$ and $v_1, v^{\prime}, v_2$ are subsequences of $v$.
+\end{proof}
+
+\begin{figure}
+\includegraphics[]{figure12.png}
+\caption{}
+\label{fig:figure12}
+\end{figure}
+
+\subsection{The uniqueness of the solution of the equation $N\circ X= N^{\prime}$}
+
+\begin{theorem}
+  Let $F, G, G^{\prime} \in \mathcal{R}$ and $G^{\prime} \circ F$ and each inner point of $G \circ F$ is an endpoint of at least one line segment. Then it is true that:
+  \begin{equation} G \circ F = G^{\prime} \circ F \implies G = G^{\prime}. \label{eq:th51} \end{equation}
+  The symmetric proposition is also true: If $F \circ G$ and $F \circ G^{\prime}$ are declared and for every inner point is the starting point of at least one line segment, then it follows:
+  \begin{equation} F \circ G = F \circ G^{\prime} \implies G = G^{\prime}. \label{eq:th51} \end{equation}
+  If the preconditions (1) or the preconditions of (2) are met, then it follows that:
+  \begin{equation} F \times G = F \times G^{\prime} \implies G = G^{\prime}, \label{eq:th53} \end{equation}
+  \begin{equation} G \times F = G^{\prime} \times F \implies G = G^{\prime}. \label{eq:th54} \end{equation}
+\end{theorem}
+
 
 
 \section{Definition of categories by a direct product through generators and defining relations}
