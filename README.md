@@ -48,6 +48,10 @@ The article "Elektronische Informationsverarbeitung und Kybernetik" by Günter H
 | Abänderung | modification | | |
 | Weg | path | | |
 | Teilfolge | subsequence | | |
+| Repräsentanten | representative | | |
+| Inzidenzrelationen | incidence realtions | | |
+| Platz | position | place| |
+
 ## License 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
