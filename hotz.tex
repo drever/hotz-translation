@@ -398,6 +398,7 @@ where $v = [v_i, \ldots, v_j]$ describes the considered chain of deformation.
 \end{proof}
 
 \begin{lemma}
+  \label{eq:lemma4}
   \begin{enumerate}
     \item If $v = [v_i, v_k]$ with $i \neq k \pm 1$ is a chain of deformation of $H$, then $v^{\prime} = v_k, v_i]$ is a also a chain of deformation for $H$, and $vH =v^{\prime}H$.
     \item If $v = [v_i, v_{i+1}, v_i]$ and $v^{\prime}=[v_{i+1}, v_i, v_{i+1}]$, then $v$ is defined for $H$ iff $v^{\prime}$ is defined for $H$ and $vH = v^{\prime}H$ holds.
@@ -503,13 +504,23 @@ If $v=[v_{i_1}, \ldots, v_{i_k}]$ describes a chain of deformations for $H$, the
 
 \begin{lemma}
 Let $v = [v_{i_1} , \ldots, v_{i_k}]$ be a reduced chain of deformations for $H$, 
-and let $h(0) = h(k)$. If $A(v) > 0$, then there exists a chain of deformations $v^{\prime}= [ v_{l_1}, \ldots, v_{i_k}]$ with $l_1 > 1$ and $v^{\prime} H = v H$, 
+and let $h(0) = h(k)$. If $A(v) > 0$, then there exists a chain of deformations $v^{\prime} = [ v_{l_1}, \ldots, v_{i_k}]$ with $l_1 > 1$ and $v^{\prime} H = v H$, 
 $A(v) = A(v^{\prime})$ and $h(0)=h^{\prime}(k)$.
 \end{lemma}
 \begin{proof}
 Since $A(v) > 0$, there exists a $j$ with $h(j) = h(j - i)$;
 let $j$ be the smallest number with this property. If $j = 1$, then $v_{i_1} \neq v_1$, and there is nothing to show.
 \end{proof}
+
+Also, let $j > 1$. Since $v$ is reduced and $j$ is minimal with $h(j) = h(j - 1)$, 
+it follows that $i_1 = 1, i_2 = 2, \ldots, i_{j-1} = j - 1, h(j-1) = j$ and $i_j \neq j - 1, j$. If $i_j > j$, 
+then we can exchange $v_{ij}$ according to lemma \ref{eq:lemma4} with $[v_i, \ldots, v_{j-1}]$ and thereby obtain desired the chain of deformation $v^{\prime}$.
+If $i_j < j - 1$, then we can exchange as long as we arrive at a $v_l$ with $l = i_j + 1$. 
+Then we apply the substitution considered in lemma \ref{eq:lemma4} of $[v_{l-1}, v_1, v_{l -1}]$ with $[v_l, v_{l-1}, v_l]$,
+such that the resulting chain of deformation has the form $[v_1, \ldots v_{l-2}, v_l, v_{l-1}, v_l, \ldots]$.
+Now, we can exchange $v_l$ with $[v_1, \ldots, v_{l-2}]$ and have thereby obtained a chain of deformation $v^{\prime}$ of the same length as $v$, 
+which begins with $v_l \neq v_1$ and for which $v^{\prime}H = vH$ holds (according to lemma \ref{eq:lemma4}). It is apparent that: 
+$A(v^{\prime})=A(v)$ and $h(k) = h^{\prime}(k)$, i.e. $h(k)=1$.
 
 \section{Definition of categories by a direct product through generators and defining relations}
 \subsection{Representation of functions with basis functions}
