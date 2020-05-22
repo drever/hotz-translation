@@ -512,7 +512,7 @@ Since $A(v) > 0$, there exists a $j$ with $h(j) = h(j - i)$;
 let $j$ be the smallest number with this property. If $j = 1$, then $v_{i_1} \neq v_1$, and there is nothing to show.
 \end{proof}
 
-Also, let $j > 1$. Since $v$ is reduced and $j$ is minimal with $h(j) = h(j - 1)$, 
+Thus, let $j > 1$. Since $v$ is reduced and $j$ is minimal with $h(j) = h(j - 1)$, 
 it follows that $i_1 = 1, i_2 = 2, \ldots, i_{j-1} = j - 1, h(j-1) = j$ and $i_j \neq j - 1, j$. If $i_j > j$, 
 then we can exchange $v_{ij}$ according to lemma \ref{eq:lemma4} with $[v_i, \ldots, v_{j-1}]$ and thereby obtain desired the chain of deformation $v^{\prime}$.
 If $i_j < j - 1$, then we can exchange as long as we arrive at a $v_l$ with $l = i_j + 1$. 
@@ -521,6 +521,56 @@ such that the resulting chain of deformation has the form $[v_1, \ldots v_{l-2},
 Now, we can exchange $v_l$ with $[v_1, \ldots, v_{l-2}]$ and have thereby obtained a chain of deformation $v^{\prime}$ of the same length as $v$, 
 which begins with $v_l \neq v_1$ and for which $v^{\prime}H = vH$ holds (according to lemma \ref{eq:lemma4}). It is apparent that: 
 $A(v^{\prime})=A(v)$ and $h(k) = h^{\prime}(k)$, i.e. $h(k)=1$.
+
+\begin{lemma}
+  Let $H_1$ be a network with exactly one inner point, $H_2 \circ H_1$ and $H^{\prime}_2 \circ H_1$ are defined fulfil the requirements (1) (theorem \ref{eq:th5}). 
+  $v = [v_{i_1}, \ldots, v_{i_{k-1}}]$ defines a chain of deformation for $H_2 \circ H_1$ with $H^{\prime}_2 \circ H_1 = v (H_2 \circ H_1)$. 
+  Then it follows: $H_2$ and $H^{\prime}_2$ define the same network.
+\end{lemma}
+
+\begin{proof}
+  (proof by induction over the length $k$ of the chain of deformation). 
+  \begin{enumerate}
+    \item Base case. For $k = 0$, i.e. v = e it follows that $H_2 = H^{\prime}_2$.
+    \item The proposition is true for $0 \leq n \leq k - 1$. If $v$ is not reduced, then the proposition follows from lemma 2. Thus, let $v$ be reduced. 
+      Then $A(v) > 0$ following lemma 3. Following lemma 5 $h(0) = h(k)$. Thereby the requirements for lemma 7 are met. 
+      There exists a \[v^{\prime} = [v_{l_1}, \ldots, v_{l_{k - 1}} \mbox{with} v_{l_1} \neq v_1 \mbox{and} v^{\prime}(H_2 \circ H_1) = H^{\prime}_2 \circ H_1. \]
+      We apply lemma 6 and obtain a $H^{\prime \prime}$ with
+      \[ H_2 \circ H_1 \xrightarrow{v_{l_1}} H^{\prime \prime}_2 \circ H_1 \xrightarrow{[v_{l_2}, \ldots, v_{l_k}]} H^{\prime}_2 \circ H_1 \]
+      and
+      \[ H^{\prime \prime} = v_{i_1 - 1} H_2 \mbox{.} \]
+      Using the base case we can induce that $H^{\prime \prime}_2$ and $H^{\prime}_2$ define the same network, 
+      from which this also follows for $H_2$ and $H_2^{\prime}$, q.e.d.
+    \end{enumerate}
+
+\end{proof}
+
+Now we can finally proof theorem 5.
+
+Let $G \circ F = G^{\prime} \circ F$. 
+Then we choose a sequential presentation of $G, G^{\prime}$ and $F$, which we compose into sequential presentations $G \circ F$ and $G^{\prime} \circ F$. 
+If $F$ contains an inner point, then it follows directly from lemma 8 the proposition $G = G^{\prime}$. 
+We prove the theorem in its generality by induction over the number of inner points in $F$, 
+i.e. over the number of factors in the sequential presentation of $F$. Let $F_2 \circ F_1 = F$, 
+and $F_1$ contain exactly one inner point, then $(G \circ F_2) \circ F_1 = (G^{\prime} \circ F_2) \circ F_1$ holds, 
+from which according to the previous arguments follows that $G \circ F_2 = G^{\prime \prime} \circ F_2$. 
+After applying the base case to this we obtain $G = G^{\prime}$, which proves theorem 5.
+
+The results of theorem 5 permit us the specify a simple procedure for the decision of equality of networks,
+which fulfil the preconditions of the theorem.
+
+A necessary condition for $N_1 = N_2$ is that $Q(N_1) = Z(N_2)$ and $Z(N_1) = Z(N_2)$ and that $N_1$ and $N_2$ have the same number of inner points.
+
+If $m = 1$, then the decision is trivial.
+
+Let $m > 1$. In this case there is a network $N^{\prime}_1$ with $m - 1$ inner points,
+such that $N_1 = N^{\prime} \circ H_1$ holds. Now examine if it is possible to separate factor $H_1$ from $N_2$. 
+This can be done by checking if there is an inner point from $N_2$ with the same number of inputs and outputs as the inner point $H_1$,
+and if this point is connected in the corresponding fashion with the starting points of $N_2$,
+as it applies to the inner point of $H_1$.
+If such a point exists, then it follows that $N_2 = N^{\prime}_2 \circ H_1$ and because of theorem 5 it follows that $N_2 = N_1$ iff we can write $N^{\prime}_2 = N^{\prime}_1$.
+$N^{\prime}_2$ and $N^{\prime}_1$ have only $m - 1$ inner points. 
+Thus we have a procedure with delivers the sought-after decision not later than $m$ steps.
 
 \section{Definition of categories by a direct product through generators and defining relations}
 \subsection{Representation of functions with basis functions}
