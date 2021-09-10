@@ -1,5 +1,5 @@
 
-# Translation of the document "Elektronische Informationsverarbeitung und Kybernetik" by Günter Hotz from German to English.
+# Translation of the document "Eine Algebraisierung des Syntheseproblems von Schaltkreisen" by Günter Hotz from German to English.
 
 ## Introduction
 
