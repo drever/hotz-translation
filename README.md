@@ -1,6 +1,8 @@
 
 # Translation of the document "Eine Algebraisierung des Syntheseproblems von Schaltkreisen" by Günter Hotz from German to English.
 
+**Note: This translation is work in progress!**
+
 ## Introduction
 
 The first formal definition of [string diagrams](https://ncatlab.org/nlab/show/string+diagram) appears to be a paper by Günter Hotz, published in "Elektronische Informationsverarbeitung und Kybernetik": Eine Algebraisierung des Syntheseproblems von Schaltkreisen, EIK, Bd. 1, (185-205), Bd, 2, (209-231) 1965 ([part I](https://www.magentacloud.de/lnk/LiPMlYfh), [part II](https://www.magentacloud.de/lnk/YivslUWJ)). This is a translation from German to English.
